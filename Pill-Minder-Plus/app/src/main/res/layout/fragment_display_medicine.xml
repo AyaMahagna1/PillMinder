@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout_display_medicine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_display_med"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/dodger_blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:showIn="@layout/fragment_display_medicine">
+
+        <ImageView
+            android:id="@+id/icon_edit_display_med_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:layout_gravity="end"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="32dp"/>
+        <ImageView
+            android:id="@+id/icon_delete_display_med_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:layout_gravity="end"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_view_remind_me_label_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Remind me when remaining:"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_view_remaining_amount_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_remaining_amount_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_remind_count_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="1"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_remind_me_label_display_med"
+                app:layout_constraintStart_toEndOf="@+id/text_view_remind_me_label_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_remind_me_label_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_time_4_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="04:00"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/text_view_time_3_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_time_3_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_take_4_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="take"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_time_4_display_med"
+                app:layout_constraintStart_toStartOf="@+id/text_view_take_3_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_time_4_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_time_3_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="22:00"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/text_view_time_2_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_time_2_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_take_2_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="take"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_time_2_display_med"
+                app:layout_constraintStart_toStartOf="@+id/text_view_take_1_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_time_2_display_med"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Last taken"
+                android:textColor="#777777"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_last_taken_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sat, 9 Apr, 10:11"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Reminders"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="@+id/text_view_last_taken_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_last_taken_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_day_frequency_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Every day"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/text_view_time_1_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="10:00"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/text_view_day_frequency_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_day_frequency_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_time_2_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="16:00"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/text_view_time_1_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_time_1_display_med" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Prescription Refill"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="@+id/text_view_time_2_display_med"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_time_4_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_remaining_amount_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="7"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="left"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_remaining_amount_display_med"
+                app:layout_constraintStart_toEndOf="@+id/text_view_remaining_amount_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_remaining_amount_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_take_3_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="take"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_time_3_display_med"
+                app:layout_constraintStart_toStartOf="@+id/text_view_take_2_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_time_3_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_take_1_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="take"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_time_1_display_med"
+                app:layout_constraintStart_toEndOf="@+id/text_view_time_1_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_time_1_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_dose_amount_1_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="1"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_take_1_display_med"
+                app:layout_constraintStart_toEndOf="@+id/text_view_take_1_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_take_1_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_dose_amount_2_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_take_2_display_med"
+                app:layout_constraintStart_toStartOf="@+id/text_view_dose_amount_1_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_take_2_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_dose_amount_3_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_take_3_display_med"
+                app:layout_constraintStart_toStartOf="@+id/text_view_dose_amount_1_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_take_3_display_med" />
+
+            <TextView
+                android:id="@+id/text_view_dose_amount_4_display_med"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_take_4_display_med"
+                app:layout_constraintStart_toStartOf="@+id/text_view_dose_amount_1_display_med"
+                app:layout_constraintTop_toTopOf="@+id/text_view_take_4_display_med" />
+
+            <Button
+                android:id="@+id/button_suspend_display_med"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="SUSPEND"
+                android:textColor="@color/dodger_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView12"
+                app:strokeColor="@color/dodger_blue"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/button_refill_display_med"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="REFILL"
+                android:textColor="@color/dodger_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                app:layout_constraintEnd_toEndOf="@+id/button_suspend_display_med"
+                app:layout_constraintTop_toTopOf="@+id/textView18"
+                app:strokeColor="@color/dodger_blue"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@color/dodger_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_display_med">
+
+        <ImageView
+            android:id="@+id/image_view_med_icon_display_med"
+            android:layout_width="42dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_med_name_display_med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/meds"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image_view_med_icon_display_med"
+            app:layout_constraintTop_toTopOf="@+id/image_view_med_icon_display_med" />
+
+        <TextView
+            android:id="@+id/text_view_strength_display_med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1000 mg"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/text_view_med_name_display_med"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_med_name_display_med" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

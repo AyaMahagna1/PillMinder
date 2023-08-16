@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "108321287917",
+    "firebase_url": "https://medicine-reminder-d3c8d-default-rtdb.firebaseio.com",
+    "project_id": "medicine-reminder-d3c8d",
+    "storage_bucket": "medicine-reminder-d3c8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108321287917:android:7b72e25d9b25f39c1f66e4",
+        "android_client_info": {
+          "package_name": "com.application.pillminderplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108321287917-3pbtq6c1t8fp2j59cv30g1gskc7igk6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.pillminderplus",
+            "certificate_hash": "04415b33f65c2e9aebf0992c5da6dfb64f6ca484"
+          }
+        },
+        {
+          "client_id": "108321287917-1fa0gn35ah7pi07i02au5d0kitt5t90q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG0JyPC8-Zfu0xdU8vQ8QFJtWT7SFduB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108321287917-1fa0gn35ah7pi07i02au5d0kitt5t90q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

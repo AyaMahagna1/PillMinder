@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemMedFriends"
+        android:icon="@drawable/ic_groups_black_24dp"
+        android:title="@string/medFriends" />
+    <item
+        android:id="@+id/itemMedFriendsReqs"
+        android:icon="@drawable/addfriend"
+        android:title="@string/friendsRequests" />
+    <item
+        android:id="@+id/itemInviteMedFriend"
+        android:icon="@drawable/ic_baseline_add_circle_dogger_blue_24"
+        android:title="@string/invite_friend" />
+    <item
+        android:id="@+id/itemLogout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout" />
+</menu>

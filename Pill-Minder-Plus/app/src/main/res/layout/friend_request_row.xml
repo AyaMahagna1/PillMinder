@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/friendReqRowId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/friendReqImgId"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="2dp"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/ic_pills" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/friendReqImgId"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_pillsgif" />
+
+    <TextView
+        android:id="@+id/friendReqNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:padding="2dp"
+        android:textColor="#252424"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/friendReqImgId"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Drug Name" />
+
+    <Button
+        android:id="@+id/confirmBtnId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/confirm"
+        app:layout_constraintLeft_toRightOf="@id/friendReqImgId"
+        app:layout_constraintTop_toBottomOf="@+id/friendReqNameId" />
+
+    <Button
+        android:id="@+id/deleteBtnId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/delete"
+        app:layout_constraintLeft_toRightOf="@id/confirmBtnId"
+        app:layout_constraintTop_toBottomOf="@+id/friendReqNameId"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
